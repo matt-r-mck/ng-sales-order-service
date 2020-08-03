@@ -1,0 +1,33 @@
+<div id="component">
+    <span class="display-4" >{{pageTitle}}</span>
+    <span> | </span>
+    <a routerLink= "/orders/list" class="badge badge-pill badge-primary">Back to List</a>
+    <div >
+    <!-- renders table IF there is a customer -->
+    <table *ngIf="order" class="table table-dark table-sm">
+        <tr>
+            <th>Id</th>
+            <td><input [(ngModel)]= "order.id" type="text" size= "5" disabled></td>            
+        </tr>
+        <tr>
+            <th>Customer</th>
+            <td><input [(ngModel)]= "order.customer.name" type="text" size= "25" disabled></td>            
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td><input [(ngModel)]= "order.description" type="text" size= "25" disabled></td>            
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td><input [(ngModel)]= "order.total" type="number" size= "5" disabled></td>            
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button  (click)="verify()" class="btn btn-danger btn-sm">Delete</button>
+                <span> | </span><button *ngIf="showDelete" (click)="delete()" class="btn btn-success btn-sm">Verify</button>
+            </td>
+        </tr>
+    </table>
+    </div>
+</div>

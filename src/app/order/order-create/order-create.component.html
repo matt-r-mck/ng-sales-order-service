@@ -1,0 +1,33 @@
+<div id="component">
+    <span class="display-4" >{{pageTitle}}</span>
+    <div >
+    <table *ngIf="order" class="table table-dark table-sm">
+        <tr>
+            <th>Id</th>
+            <td><input [(ngModel)]= "order.id" type="text" size= "5" disabled></td>            
+        </tr>
+        <tr>
+            <th>Customer</th>
+            <td>
+                <select [(ngModel)]= "order.customerId">
+                    <option *ngFor="let c of customers" value={{c.id}}>{{c.name}}</option>
+                </select>
+            </td>            
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td><input [(ngModel)]= "order.description" type="text" size= "25"></td>            
+        </tr> 
+        <tr>
+            <th>Total</th>
+            <td><input [(ngModel)]= "order.total" type="number" size= "10"></td>            
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="save()" type="button" class="btn btn-success btn-sm">Save</button><span> | </span>
+                <button  (click)="cancel()" type="button" class="btn btn-danger btn-sm">Cancel</button>
+            </td>
+        </tr>
+    </table>
+    </div>
+</div>

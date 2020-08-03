@@ -8,6 +8,10 @@ import { CustomerListComponent } from './customer/customer-list/customer-list.co
 import { CustomerDetailComponent } from './customer/customer-detail/customer-detail.component';
 import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 import { CustomerCreateComponent } from './customer/customer-create/customer-create.component';
+import { OrderListComponent } from './order/order-list/order-list.component';
+import { OrderEditComponent } from './order/order-edit/order-edit.component';
+import { OrderDetailComponent } from './order/order-detail/order-detail.component';
+import { OrderCreateComponent } from './order/order-create/order-create.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { CustomerCreateComponent } from './customer/customer-create/customer-cre
     CustomerListComponent,
     CustomerDetailComponent,
     CustomerEditComponent,
-    CustomerCreateComponent
+    CustomerCreateComponent,
+    OrderListComponent,
+    OrderEditComponent,
+    OrderDetailComponent,
+    OrderCreateComponent
   ],
   imports: [
     BrowserModule,

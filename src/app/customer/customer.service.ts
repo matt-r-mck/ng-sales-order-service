@@ -5,7 +5,7 @@ import {Customer} from './customer.class';
 
 const baseUrl = "http://localhost:56616/api/customers"
 
-@Injectable({
+@Injectable({ 
   providedIn: 'root'
 })
 export class CustomerService {

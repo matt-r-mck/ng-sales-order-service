@@ -11,7 +11,7 @@ export class CustomerListComponent implements OnInit {
 
   customers: Customer[];
 
-
+ 
   constructor(private custSvc: CustomerService) { }
 
   ngOnInit(): void {
