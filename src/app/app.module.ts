@@ -12,6 +12,8 @@ import { OrderListComponent } from './order/order-list/order-list.component';
 import { OrderEditComponent } from './order/order-edit/order-edit.component';
 import { OrderDetailComponent } from './order/order-detail/order-detail.component';
 import { OrderCreateComponent } from './order/order-create/order-create.component';
+import { BoolDisplayPipe } from './pipes/bool-display.pipe';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { OrderCreateComponent } from './order/order-create/order-create.componen
     OrderListComponent,
     OrderEditComponent,
     OrderDetailComponent,
-    OrderCreateComponent
+    OrderCreateComponent,
+    BoolDisplayPipe,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

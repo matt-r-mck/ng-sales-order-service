@@ -1,7 +1,8 @@
+<app-menu></app-menu>
 <div id="component">
     <span class="display-4" >{{pageTitle}}</span>
     <span> | </span>
-    <a routerLink= "/customers/list" class="badge badge-pill badge-primary">Back to List</a>
+    <a routerLink= "/customers/list" class="btn btn-primary btn-sm">Back to List</a>
     <div >
     <!-- renders table IF there is a customer -->
     <table *ngIf="customer" class="table table-dark table-sm">

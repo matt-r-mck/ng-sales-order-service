@@ -1,7 +1,8 @@
 <!-- Heading and styles should match -->
+<app-menu></app-menu>
 <div id="component">
     <h3 class="display-4">Order List</h3>
-    <a routerLink="/orders/create" class="badge badge-pill badge-info">New Order</a>
+    <a routerLink="/orders/create" class="btn btn-info btn-sm">New Order</a>
     <table class="table table-dark table-striped">
         <thead>
             <th>ID</th>
@@ -19,8 +20,8 @@
                 <td>{{o.customer.name}}</td>
                 <td>
                     <!-- contain url extensions for our services -->
-                    <a routerLink="/orders/detail/{{o.id}}" class="badge badge-pill badge-info">Detail</a><span>|</span>
-                    <a routerLink="/orders/edit/{{o.id}}" class="badge badge-pill badge-info">Edit</a>
+                    <a routerLink="/orders/detail/{{o.id}}" class="btn btn-info btn-sm">Detail</a><span>|</span>
+                    <a routerLink="/orders/edit/{{o.id}}" class="btn btn-info btn-sm">Edit</a>
                 </td>
             </tr>
         </tbody>
