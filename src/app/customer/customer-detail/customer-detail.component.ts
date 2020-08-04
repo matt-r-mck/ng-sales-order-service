@@ -4,7 +4,7 @@ import { CustomerService } from '../customer.service';
 import { Customer } from '../customer.class';
 import { ActivatedRoute, Router } from '@angular/router';
 
-@Component({
+@Component({ 
   selector: 'app-customer-detail',
   templateUrl: './customer-detail.component.html',
   styleUrls: ['./customer-detail.component.css']
@@ -17,6 +17,7 @@ export class CustomerDetailComponent implements OnInit {
   showDelete: boolean = false;
 
   verify(): void{ this.showDelete = !this.showDelete;}
+  
   delete(): void {
     this.custSvc.remove(this.customer.id).subscribe(
       res => {

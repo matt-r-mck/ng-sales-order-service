@@ -8,13 +8,14 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './order-detail.component.html',
   styleUrls: ['./order-detail.component.css'] 
 })
-export class OrderDetailComponent implements OnInit {
+export class OrderDetailComponent implements OnInit { 
 
   order: Order = null;
   pageTitle: string = "Order Detail";
   showDelete: boolean = false;
 
   verify(): void{ this.showDelete = !this.showDelete;}
+
   delete(): void {
     this.ordSvc.remove(this.order.id).subscribe(
       res => {
@@ -29,13 +30,15 @@ export class OrderDetailComponent implements OnInit {
 
 
   constructor(
+
     private ordSvc: OrderService,
     private route: ActivatedRoute,
     private router: Router,
+    
   ) { } 
 
   ngOnInit(): void {
-    let id = this.route.snapshot.params.id;
+    let id = this.route.snapshot.params.id; 
     this.ordSvc.get(+id).subscribe(
       res => {
         console.log("Order", res);

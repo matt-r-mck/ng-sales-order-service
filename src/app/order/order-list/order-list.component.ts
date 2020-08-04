@@ -10,6 +10,7 @@ import { OrderService } from '../order.service';
 export class OrderListComponent implements OnInit {
 
   orders: Order[];
+  pageTitle: string = "Order Lines";
 
   constructor(private ordSvc: OrderService ) { }
 

@@ -1,7 +1,7 @@
 <!-- Heading and styles should match -->
 <app-menu></app-menu>
 <div id="component">
-    <h3 class="display-4">Order List</h3>
+    <h3 class="display-4">{{pageTitle}}</h3>
     <a routerLink="/orders/create" class="btn btn-info btn-sm">New Order</a>
     <table class="table table-dark table-striped">
         <thead>
@@ -21,6 +21,7 @@
                 <td>
                     <!-- contain url extensions for our services -->
                     <a routerLink="/orders/detail/{{o.id}}" class="btn btn-info btn-sm">Detail</a><span>|</span>
+                    <a routerLink="/orders/lines/{{o.id}}" class="btn btn-info btn-sm">Lines</a><span>|</span>
                     <a routerLink="/orders/edit/{{o.id}}" class="btn btn-info btn-sm">Edit</a>
                 </td>
             </tr>

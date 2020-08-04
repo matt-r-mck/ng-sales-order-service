@@ -30,7 +30,7 @@ export class CustomerEditComponent implements OnInit {
       },
       err=>{
         console.error(err);
-      }
+      } 
     )
   }
 

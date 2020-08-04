@@ -10,8 +10,6 @@ import { Customer } from '../customer.class';
 export class CustomerListComponent implements OnInit {
 
   customers: Customer[];
-
-
  
   constructor(private custSvc: CustomerService) { }
 

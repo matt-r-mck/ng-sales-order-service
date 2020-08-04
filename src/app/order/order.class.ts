@@ -1,4 +1,5 @@
 import {Customer} from '../customer/customer.class'
+
 export class Order {
 
     id: number;

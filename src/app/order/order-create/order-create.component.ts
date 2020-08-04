@@ -12,7 +12,7 @@ import { Customer } from 'src/app/customer/customer.class';
 })
 export class OrderCreateComponent implements OnInit {
 
-  pageTitle: string = "CreateOrder"
+  pageTitle: string = "CreateOrder";
   order: Order = new Order();
   customers: Customer[];
 
