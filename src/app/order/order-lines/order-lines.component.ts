@@ -24,7 +24,7 @@ export class OrderLinesComponent implements OnInit {
     this.showDelete = false;
     this.ordItemSvc.remove(id).subscribe(
       res => {
-        console.log("OrderItem delete successful");
+        console.log("Order Item delete successful");
         this.refresh(this.orderId);
       },
       err => {

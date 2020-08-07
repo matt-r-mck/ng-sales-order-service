@@ -36,9 +36,9 @@
                 <td>{{oi.item.price | currency}}</td>
                 <td>{{oi.item.price * oi.quantity | currency}}</td>
                 <td>
-                    <a routerLink="/orderItems/edit/{oi.id}" class="btn btn-info btn-sm">Edit</a><span>|</span>
+                    <a routerLink="/orderitems/edit/{{oi.id}}" class="btn btn-info btn-sm">Edit</a><span>|</span>
                     <button  (click)="verify()" class="btn btn-danger btn-sm">Delete</button>
-                    <span> | </span><button *ngIf="showDelete" (click)="delete()" class="btn btn-success btn-sm">Verify</button>
+                    <span> | </span><button *ngIf="showDelete" (click)="delete(oi.id)" class="btn btn-success btn-sm">Verify</button>
                 </td>
             </tr>
         </tbody>

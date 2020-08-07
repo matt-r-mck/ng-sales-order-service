@@ -9,7 +9,21 @@ import {ItemService} from '../item.service'
 })
 export class ItemListComponent implements OnInit {
 
-  items: Item[]
+  items: Item[];
+  pageTitle: string = "Item List";
+  sortCriteria: string = "id";
+  sortAsc: boolean = true;
+  searchCriteria: string = "";
+
+  sort(col: string): void {
+    if(col === this.sortCriteria){
+      this.sortAsc = !this.sortAsc;
+      return;
+    }
+    this.sortAsc = true;
+    this.sortCriteria=col;
+    
+  }
 
   constructor(private itemSvc: ItemService) { }
 

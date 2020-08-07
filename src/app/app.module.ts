@@ -21,6 +21,10 @@ import { ItemCreateComponent } from './item/item-create/item-create.component';
 import { OrderItemCreateComponent } from './orderItem/order-item-create/order-item-create.component';
 import { OrderItemEditComponent } from './orderItem/order-item-edit/order-item-edit.component';
 import { OrderLinesComponent } from './order/order-lines/order-lines.component';
+import { SortPipe } from './sort/sort.pipe';
+import { CustomerSearchPipe } from './customer/customer-search.pipe';
+import { ItemSearchPipe } from './item/item-search.pipe';
+import { OrderSearchPipe } from './order/order-search.pipe';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import { OrderLinesComponent } from './order/order-lines/order-lines.component';
     OrderItemCreateComponent,
     OrderItemEditComponent,
     OrderLinesComponent,
+    SortPipe,
+    CustomerSearchPipe,
+    ItemSearchPipe,
+    OrderSearchPipe,
   ],
   imports: [
     BrowserModule,

@@ -10,13 +10,29 @@ import { OrderService } from '../order.service';
 export class OrderListComponent implements OnInit {
 
   orders: Order[];
-  pageTitle: string = "Order Lines";
+  pageTitle: string = "Order List";
+  sortCriteria: string = "id";
+  sortAsc: boolean = true;
+  searchCriteria: string = "";
+
+  sort(col: string): void {
+    if(col === this.sortCriteria){
+      this.sortAsc = !this.sortAsc;
+      return;
+    }
+    this.sortAsc = true;
+    this.sortCriteria=col;
+    
+  }
 
   constructor(private ordSvc: OrderService ) { }
 
   ngOnInit(): void {
     this.ordSvc.list().subscribe(
       res=>{
+        for( let o of res){
+          o.customerName = o.customer.name;
+        }
         console.log(res);
         this.orders = res as Order[];
       },

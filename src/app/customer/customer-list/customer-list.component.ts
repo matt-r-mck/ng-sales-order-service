@@ -10,6 +10,21 @@ import { Customer } from '../customer.class';
 export class CustomerListComponent implements OnInit {
 
   customers: Customer[];
+  pageTitle: string= "Customer List"
+  
+  sortCriteria: string = "id";
+  sortAsc: boolean = true;
+  searchCriteria: string = "";
+
+  sort(col: string): void {
+    if(col === this.sortCriteria){
+      this.sortAsc = !this.sortAsc;
+      return;
+    }
+    this.sortAsc = true;
+    this.sortCriteria=col;
+    
+  }
  
   constructor(private custSvc: CustomerService) { }
 

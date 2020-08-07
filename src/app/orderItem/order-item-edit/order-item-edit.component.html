@@ -1,1 +1,36 @@
-<p>order-item-edit works!</p>
+<app-menu></app-menu>
+<div id="component">
+    <span class="display-4" >{{pageTitle}}</span>
+    <div >
+    <table *ngIf="orderItem" class="table table-dark table-striped">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td><input [(ngModel)]= "orderItem.id" type="number" size= "5" disabled></td>            
+        </tr>
+        <tr>
+            <th>Item</th>
+            <td>
+                <select [(ngModel)]= "orderItem.itemId">
+                    <option *ngFor="let i of items" value={{i.id}}>{{i.name}}</option>
+                </select>
+                </td>           
+        </tr>
+        <tr>
+            <th>Quantity</th>
+            <td><input [(ngModel)]= "orderItem.quantity" type="number" size= "5"></td>            
+        </tr>
+        <!-- <tr>
+            <th>Price</th>
+            <td><input [(ngModel)]= "orderItem.item.price" type="number" size= "10" disabled></td>            
+        </tr> -->
+        <tr>
+            <td colspan="2">
+                <button (click)="save()" type="button" class="btn btn-success btn-sm">Save</button><span> | </span>
+                <button  (click)="cancel()" type="button" class="btn btn-danger btn-sm">Cancel</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</div>

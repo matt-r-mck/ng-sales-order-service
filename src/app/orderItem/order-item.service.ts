@@ -13,7 +13,7 @@ export class OrderItemService {
   constructor(private http: HttpClient) { }
 
   list(): Observable<OrderItem[]>{
-    return this.http.get(`${baseUrl}/${id}`) as Observable<OrderItem[]>;
+    return this.http.get(`${baseUrl}`) as Observable<OrderItem[]>;
   }
 
   get( id: number ): Observable<OrderItem>{
@@ -28,7 +28,7 @@ export class OrderItemService {
     return this.http.put(`${baseUrl}/${orderItem.id}`, orderItem ) as Observable<any>;
   }
 
-  remove( id: number ): Observable<OrderItem>{
+  remove( id: number ): Observable<OrderItem>{ 
     return this.http.delete(`${baseUrl}/${id}` ) as Observable<OrderItem>;
   }
 

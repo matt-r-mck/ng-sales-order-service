@@ -3,17 +3,14 @@ import { Item } from '../item/item.class'
 
 export class OrderItem {
 
-    id: number;
-    orderId: number;
-    itemId: number;
-    quantity: number;
+    id: number = 0;
+    orderId: number = 0;
+    itemId: number = 0;
+    quantity: number = 1;
+    item: Item;
 
 constructor(){
 
-    this.id = 0;
-    this.orderId = 0;
-    this.itemId = 0;
-    this.quantity = 0;
 }
 
 }
